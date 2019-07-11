@@ -31,8 +31,7 @@ class _FruitsListItemState extends State<FruitsListItem> {
 	@override
 	Widget build(BuildContext context) {
 		return Container(
-			height: MediaQuery.of(context).size.height,
-			width: MediaQuery.of(context).size.width / 1.2,
+			width: MediaQuery.of(context).size.width / 1.5,
 			child: Card(
 				shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(16.0)),
 				color: widget.bgColor,
@@ -40,11 +39,12 @@ class _FruitsListItemState extends State<FruitsListItem> {
 				child: Padding(
 					padding: EdgeInsets.all(16.0),
 					child: Column(
-						crossAxisAlignment: CrossAxisAlignment.center,
+						mainAxisAlignment: MainAxisAlignment.center,
 						children: <Widget>[
+							SizedBox(height: 8.0,),
 							Container(
-								width: MediaQuery.of(context).size.width/2,
-								height: MediaQuery.of(context).size.height/5,
+								width: MediaQuery.of(context).size.width/2.2,
+								height: MediaQuery.of(context).size.height/7,
 								decoration: BoxDecoration(
 									color: widget.bgColor,
 								),
@@ -53,16 +53,16 @@ class _FruitsListItemState extends State<FruitsListItem> {
 									fit: BoxFit.cover,
 								),
 							),
-							SizedBox(height: 10.0,),
+							SizedBox(height: 8.0,),
 							Text(
-								"\$ ${widget.price}",
+								"\$${widget.price}",
 								style: TextStyle(
 									color: Colors.white,
 									fontSize: 20,
 									fontWeight: FontWeight.bold,
 								),
 							),
-							SizedBox(height: 10.0,),
+							SizedBox(height: 8.0,),
 							Text(
 								"${widget.title}",
 								style: TextStyle(
@@ -72,7 +72,7 @@ class _FruitsListItemState extends State<FruitsListItem> {
 								maxLines: 3,
 								overflow: TextOverflow.ellipsis,
 							),
-							SizedBox(height: 12.0,),
+							SizedBox(height: 10.0,),
 							RaisedButton(
 								padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 16.0),
 								textColor: Colors.white,
