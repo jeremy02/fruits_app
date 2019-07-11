@@ -11,7 +11,7 @@ class Fruits {
 	Fruits(this.name,this.title, this.decription, this.price, this.rating,this.imageUrl);
 }
 
-List<Fruits> restaurants = []
+List<Fruits> fruits = []
 	..add(Fruits("Avocado","Avocados are an interesting fruit because they are very low in carbohydrate yet high in healthy fats.",
 		"The fruit originated in South America, possibly in Mexico or Peru, and it was first referred to in English by the name of “crocodile pear”.\nOne of the best things about the avocado is just how adaptable it is.\nFor instance, you may have heard of ‘avocado toast’, a trendy breakfast at the moment. However, there are many different ways to use avocados – such as making guacamole, avocado ice-cream, chocolate mousses, and many other interesting dishes.\nCold-pressed avocado oil also gives olive oil a run for its money in the ‘healthiest oil’ department; it’s a heat-stable fat that contains various protective nutrients.\nAvocados are extremely nutrient-dense, and they are rich in fiber, protein, vitamins, and minerals – especially potassium."
 		,"18.45","4.5","assets/avocado_2.jpeg"))
