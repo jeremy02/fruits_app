@@ -145,6 +145,7 @@ class HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMix
 								),
 							],
 						),
+						SizedBox(height: 10,),
 						Expanded(
 							child: TabBarView(
 								controller: _tabcontroller,

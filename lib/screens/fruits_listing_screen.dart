@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/models/fruits_list.dart';
 
 class FruitsListingScreen extends StatefulWidget{
 	@override
@@ -25,8 +26,21 @@ class FruitsListingScreenState extends State<FruitsListingScreen>{
 				Container(
 					width: double.infinity,
 					height: MediaQuery.of(context).size.height/2.4,
-					decoration: BoxDecoration(
-						color: Colors.redAccent
+					child: ListView.builder(
+						primary: false,
+						shrinkWrap: true,
+						scrollDirection: Axis.horizontal,
+						itemCount: fruits == null ? 0 :fruits.length,
+						itemBuilder: (BuildContext context, int index) {
+							Fruits fruit = fruits[index];
+							return Padding(
+								padding: EdgeInsets.only(right: 10.0),
+								child: Container(
+									width: MediaQuery.of(context).size.width/1.5,
+									decoration: BoxDecoration(color: Colors.grey),
+								),
+							);
+						}
 					),
 				),
 			],
