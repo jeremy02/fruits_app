@@ -1,31 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/models/fruits_list.dart';
+import 'package:fruits_app/widgets/fruits_list_item.dart';
 
-class FruitsListingScreen extends StatefulWidget{
-	@override
-	FruitsListingScreenState createState() => FruitsListingScreenState();
-	
-}
-
-class FruitsListingScreenState extends State<FruitsListingScreen>{
-	
-	@override
-	void initState() {
-		super.initState();
-	}
-	
-	@override
-	dispose() {
-		super.dispose();
-	}
+class FruitsListingScreen extends StatelessWidget{
 	
 	@override
 	Widget build(BuildContext context) {
 		return ListView(
 			children: <Widget>[
 				Container(
-					width: double.infinity,
-					height: MediaQuery.of(context).size.height/2.4,
+					height: MediaQuery.of(context).size.height/2,
 					child: ListView.builder(
 						primary: false,
 						shrinkWrap: true,
@@ -35,9 +19,14 @@ class FruitsListingScreenState extends State<FruitsListingScreen>{
 							Fruits fruit = fruits[index];
 							return Padding(
 								padding: EdgeInsets.only(right: 10.0),
-								child: Container(
-									width: MediaQuery.of(context).size.width/1.5,
-									decoration: BoxDecoration(color: Colors.grey),
+								child: FruitsListItem(
+									name:fruit.name,
+									title: fruit.title,
+									description: fruit.description,
+									price: fruit.price,
+									rating: fruit.rating,
+									imageUrl: fruit.imageUrl,
+									bgColor: fruit.bgColor,
 								),
 							);
 						}
@@ -50,4 +39,3 @@ class FruitsListingScreenState extends State<FruitsListingScreen>{
 	@override
 	bool get wantKeepAlive => true;
 }
-
