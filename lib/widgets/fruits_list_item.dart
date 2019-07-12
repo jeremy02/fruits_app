@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:fruits_app/screens/fruits_detail_screen.dart';
 
 class FruitsListItem extends StatefulWidget {
 	
@@ -83,7 +84,9 @@ class _FruitsListItemState extends State<FruitsListItem> {
 										fontSize: 16,
 									),
 								),
-								onPressed: () {},
+								onPressed: () {
+									Navigator.push(context, MaterialPageRoute(builder: (context) => FruitsDetailScreen()));
+								},
 								shape: RoundedRectangleBorder(
 									borderRadius: new BorderRadius.circular(30.0),
 								)
