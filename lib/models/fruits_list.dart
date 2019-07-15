@@ -26,7 +26,7 @@ List<Fruits> fruits = []
 		,"13.09","3.0","assets/plums_2.jpg",Colors.blueGrey.shade600))
 	..add(Fruits("Grapes","Grapes are one of the most prevalent types of fruit, and we can find them almost everywhere.",
 		"Grapes are very versatile too, and they form the basis of many different wines, juices, jams, and dessert products.\nNot many people know this, but grapes are botanically a kind of berry. Although there are thousands of different grape varieties, they are typically classified as either white (green), red, purple, or black.\nThe health benefits of grapes are purported to come from their high polyphenol content. However, grapes are also one of the highest-sugar fruits.\nAs a result, red wine is often thought of as a health drink since it contains concentrated polyphenols and little sugar."
-		,"12.75","4.0","assets/grapes_2.jpg",Colors.yellow.shade600))
+		,"12.75","4.0","assets/grapes_2.jpg",Colors.indigo.shade600))
 	..add(Fruits("Oranges","Oranges are among the most common fruit in the world.",
 		"The orange is a citrus fruit and, surprisingly, it is a hybrid rather than an original species. If you didn’t know about this point, then oranges are actually a hybrid of the pomelo and mandarin.\nOranges have a tough outer peel that encases the soft, juicy center. Generally speaking, the fruit has a sweet and (very slight) sour taste. However, there are hundreds of orange varieties and they can vary between sweet, bitter, and sour.\nThe sweet varieties are generally the edible kind we find in shops and in orange juice.\nOranges are a relatively high-carbohydrate fruit and they provide a decent amount of vitamin C."
 		,"19.00","5.0","assets/oranges_2.jpg",Colors.pink.shade600))

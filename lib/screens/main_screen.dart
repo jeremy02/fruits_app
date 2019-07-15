@@ -59,10 +59,10 @@ class _MainScreenState extends State<MainScreen>{
                 children: <Widget>[
                     HomeScreen(),
                     TabsScreen(title: "Platter",
-                        bgColor:Colors.red,
+                        bgColor:Colors.white,
                     ),
                     TabsScreen(title: "My",
-                        bgColor:Colors.blueGrey,
+                        bgColor:Colors.white,
                     ),
                 ],
             ),

@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:fruits_app/models/fruits_list.dart';
 import 'package:fruits_app/screens/fruits_detail_screen.dart';
 
 class FruitsListItem extends StatefulWidget {
@@ -85,7 +86,12 @@ class _FruitsListItemState extends State<FruitsListItem> {
 									),
 								),
 								onPressed: () {
-									Navigator.push(context, MaterialPageRoute(builder: (context) => FruitsDetailScreen()));
+									Navigator.push(context,
+										MaterialPageRoute(builder: (context) =>
+											FruitsDetailScreen(
+												fruit: Fruits(widget.name,widget.title,widget.description,widget.price,widget.rating,widget.imageUrl,widget.bgColor),
+											))
+									);
 								},
 								shape: RoundedRectangleBorder(
 									borderRadius: new BorderRadius.circular(30.0),

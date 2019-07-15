@@ -14,6 +14,8 @@ class HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMix
 	
 	TabController _tabcontroller;
 	
+	List<String> fruitCategories = ["Avocado", "Apples", "Plums", "Grapes", "Oranges", "Lemons"];
+	
 	@override
 	void initState(){
 		super.initState();
@@ -106,57 +108,25 @@ class HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMix
 								fontSize: 16,
 								color: Colors.black,
 							),
-							tabs: <Widget>[
-								Container(
+							tabs: List<Widget>.generate(fruitCategories.length, (int index){
+								return Container(
 									margin: EdgeInsets.only(right: 8.0),
 									child: Text(
-										'Avocado',
+										fruitCategories[index]
 									),
-								),
-								Container(
-									margin: EdgeInsets.only(right: 8.0),
-									child: Text(
-										'Apples',
-									),
-								),
-								Container(
-									margin: EdgeInsets.only(right: 8.0),
-									child: Text(
-										'Plums',
-									),
-								),
-								Container(
-									margin: EdgeInsets.only(right: 8.0),
-									child: Text(
-										'Grapefruits',
-									),
-								),
-								Container(
-									margin: EdgeInsets.only(right: 8.0),
-									child: Text(
-										'Oranges',
-									),
-								),
-								Container(
-									margin: EdgeInsets.only(right: 8.0),
-									child: Text(
-										'Lemons',
-									),
-								),
-							],
+								);
+							}),
 						),
 						SizedBox(height: 10,),
 						Expanded(
 							child: TabBarView(
 								controller: _tabcontroller,
-								children: <Widget>[
-									FruitsListingScreen(),
-									Center(child:Text('Apples')),
-									Center(child:Text('Plums')),
-									Center(child:Text('Grapefruits')),
-									Center(child:Text('Oranges')),
-									Center(child:Text('Lemons')),
-								],
+								children: List<Widget>.generate(fruitCategories.length, (int index){
+									if(index == 0)
+										return FruitsListingScreen();
+									else
+										return Center(child:Text(fruitCategories[index]));
+								}),
 							),
 						),
 					],
