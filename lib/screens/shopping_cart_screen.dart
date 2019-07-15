@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/models/fruits_list.dart';
+import 'package:fruits_app/widgets/cart_list_item.dart';
+import 'package:fruits_app/widgets/fruits_list_item.dart';
 
 class ShoppingCartScreen extends StatelessWidget {
 	
@@ -21,12 +24,29 @@ class ShoppingCartScreen extends StatelessWidget {
 				],
 			),
 			body:Padding(
-				padding: EdgeInsets.all(16.0),
+				padding: EdgeInsets.symmetric(vertical: 4.0,horizontal: 16.0),
 				child: Column(
 					children: <Widget>[
 						Expanded(
-							child:Container(
-							
+							child:ListView.builder(
+								primary: false,
+								shrinkWrap: true,
+								scrollDirection: Axis.vertical,
+								itemCount: fruits == null ? 0 :fruits.length,
+								itemBuilder: (BuildContext context, int index) {
+									Fruits fruit = fruits[index];
+									return CartListItem(
+										fruit: Fruits(
+											fruits[index].name,
+											fruits[index].title,
+											fruits[index].description,
+											fruits[index].price,
+											fruits[index].rating,
+											fruits[index].imageUrl,
+											fruits[index].bgColor
+										),
+									);
+								}
 							),
 						),
 						SizedBox(height: 10.0),
