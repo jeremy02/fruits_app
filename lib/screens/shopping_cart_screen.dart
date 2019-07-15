@@ -32,6 +32,8 @@ class ShoppingCartScreen extends StatelessWidget {
 						SizedBox(height: 10.0),
 						Row(
 							mainAxisAlignment: MainAxisAlignment.end,
+							crossAxisAlignment: CrossAxisAlignment.baseline,
+							textBaseline: TextBaseline.alphabetic,
 							children: <Widget>[
 								Text(
 									"A total of: ",
