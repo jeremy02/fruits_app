@@ -163,7 +163,7 @@ class _FruitsDetailScreenState extends State<FruitsDetailScreen> {
 								child: Text(
 									"\$${widget.fruit.price}",
 									style: TextStyle(
-										fontSize: 26,
+										fontSize: 22,
 										color: Colors.red,
 										fontWeight: FontWeight.bold,
 									),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/screens/shopping_cart_screen.dart';
 
 import 'fruits_listing_screen.dart';
 
@@ -59,7 +60,11 @@ class HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMix
 						Padding(
 							padding: EdgeInsets.only(top: 30.0, left: 4.0, right: 4.0),
 							child:IconButton(
-								onPressed: ()=> null,
+								onPressed:() {
+									Navigator.push(context, 
+										MaterialPageRoute(builder: (context) => ShoppingCartScreen())
+									);
+								},
 								icon: Icon(
 									Icons.shopping_cart,
 									size: 24,
