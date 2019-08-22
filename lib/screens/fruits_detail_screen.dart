@@ -82,9 +82,6 @@ class _FruitsDetailScreenState extends State<FruitsDetailScreen> {
 							iconTheme: IconThemeData(
 								color: Colors.white
 							),
-							actionsIconTheme: IconThemeData(
-								color: Colors.white
-							),
 							actions: <Widget>[
 								IconButton(
 									icon: Icon(
@@ -163,10 +160,11 @@ class _FruitsDetailScreenState extends State<FruitsDetailScreen> {
 								child: Text(
 									"\$${widget.fruit.price}",
 									style: TextStyle(
-										fontSize: 22,
+										fontSize: 26,
 										color: Colors.red,
 										fontWeight: FontWeight.bold,
 									),
+									
 								),
 							),
 							Expanded(
