@@ -8,6 +8,7 @@ The app was created to simulate all the UI behind the image below. There's no co
 ## App
 The image below shows this current app.
 
+![alt text](assets/apples_2.jpg)
 ## Todo
 Implement or simulate a web service with full cart functionality.
 
